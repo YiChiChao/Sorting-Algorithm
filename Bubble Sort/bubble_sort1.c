@@ -2,11 +2,12 @@
 #include<stdlib.h>
 
 void bubble_sort(int* array, int n){
-    int t = 0;
+    int t = 0;//to avoid the init variable cannot go into the loop
     int swap = 0;
     while(!(swap == 0 && t != 0)){
         swap = 0;
         for(int i = 0; i < n-t-1; ++i){
+            //swap
             if(array[i] > array[i+1]){
                 int tmp = array[i];
                 array[i] = array[i+1];
@@ -15,7 +16,6 @@ void bubble_sort(int* array, int n){
             }
         }
         t += 1;
-
     }
 }
 int main(){
