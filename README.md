@@ -13,6 +13,42 @@ Def: 當輸入n筆資料時，此function所需要花費的時間。通常指最
 
 ![time complexity](https://ithelp.ithome.com.tw/upload/images/20181020/20112011LzUSOSLEC0.png)
 
+## $Bubble$ $Sort$
+泡沫排序法是一種簡單的排序法，就是在走訪整個序列時，當遇到兩數的順序不對，就交換順序，直到整個序列排序的位置正確為止。
+
+![bubble sort](https://user-images.githubusercontent.com/9586665/67413322-96dfed00-f5c9-11e9-89a4-fbcf724272aa.png)
+
+如圖，第一階從第一個數開始跑，跑到最後，在繼續從第一個數跑，直到整個序列都沒有交換才停止。
+
+當我們分析時間複雜度：
+
+最差的情況(數列是由大排到小，所以總共需要$n-1$次疊代，在疊代過程中需要$n-1-i$次的置換(swap)
+
+$$\displaystyle\sum_{i=0}^{n-1}n-1-i=n^2-n-\displaystyle\sum_{i=0}^{n-1}i=n^2-n-
+\frac{n(n-1)}{2} = \frac{n^2}{2}-\frac{n}{2}$$
+
+所以最差的時間複雜度就是 $O(n^2)$。
+
+最好的情況就是已經完全排序好的序列，只需要跑$1$次疊代確認，途中沒有任何swap，只需確認是否排序正確。
+
+所以最好的時間複雜度是$O(n)$。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## $Quick$ $Sort$
 Quick Sort 是一種分治法，
 >分治法(分而治之)是一種把一個大問題拆成二或多個相同或類似的小問題，直到小問題可以直接求解的方法。
